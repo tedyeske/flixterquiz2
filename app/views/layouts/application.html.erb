@@ -1,15 +1,30 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Quiz2THW</title>
+    <title>Nomster</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
+    <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">God is Good</h4>
+      <span class="text-muted">All the time</span>
+      <li class="nav-item">
+        <%= link_to 'Bible Verses', bibles_path, class: 'nav-link' %>
+      </li>
+    
+    </div>
+  </div>
+  <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
     <%= yield %>
+
   </body>
 </html>
